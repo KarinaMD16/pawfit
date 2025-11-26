@@ -1,0 +1,129 @@
+
+.app {
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.options {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.options nav {
+    padding: 10px 0;
+}
+
+.options nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options nav li {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+    user-select: none;
+}
+
+.options nav li.active {
+    color: #b00000;
+}
+
+.options section {
+    display: none;
+}
+
+.options section.active {
+    display: block;
+}
+
+.options section.active .container-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 140px);
+    box-sizing: border-box;
+}
+
+.options section.active .container-options img {
+    width: 100%;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+    background: #e2e2e2;
+    border: 3px solid #d0d0d0;
+    border-radius: 4px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: border-color .15s ease;
+}
+
+.options section.active .container-options img:hover {
+    border-color: #a8a8a8;
+}
+
+.options section.active .container-options img.selected {
+    border-color: red;
+}
+
+.options section.active img:hover {
+    border-color: #a8a8a8;
+}
+
+.options section.active img.selected {
+    border-color: red;
+}
+
+#container-avatar {
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* avatar */
+#container-avatar img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+#container-avatar>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#body {
+    z-index: 10;
+}
+
+#clothing {
+    z-index: 20;
+}
+
+#accessory {
+    z-index: 30;
+}
+
+#face {
+    z-index: 40;
+}
+
+#hair {
+    z-index: 50;
+}
+
+#headwear {
+    z-index: 60;
+}

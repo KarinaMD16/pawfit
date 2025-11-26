@@ -6,14 +6,80 @@
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./layout.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <p>Current theme source: <strong id="theme-source">System</strong></p>
+    <main class="app">
+        <aside class="options">
+            <nav>
+                <h2>Options</h2>
+                <ul>
+                    <li>Hair</li>
+                    <li>Body</li>
+                    <li>Face</li>
+                    <li>Headwear</li>
+                    <li>Clothing</li>
+                    <li>Accessory</li>
+                </ul>
+            </nav>
+            <section id="container-options-hair">
+                <div id="options-hair" class="container-options" >
+                    <img id="option-hair" src="" alt="">
+                </div>
+            </section>
 
-    <button id="toggle-dark-mode">Toggle Dark Mode</button>
-    <button id="reset-to-system">Reset to System Theme</button>
+            <section id="container-options-body">
+                <div id="options-body" class="container-options" >
+                    <img id="option-body" src="" alt="">
+                </div>
+            </section>
+
+            <section id="container-options-face">
+                <div id="options-face" class="container-options" >
+                    <img id="option-face" src="" alt="">
+                </div>
+            </section>
+
+            <section id="container-options-headwear">
+                <div id="options-headwear" class="container-options" >
+                    <img id="option-headwear" src="" alt="">
+                </div>
+            </section>
+
+            <section id="container-options-clothing">
+                <div id="options-clothing" class="container-options" >
+                    <img id="option-clothing" src="" alt="">
+                </div>
+            </section>
+
+            <section id="container-options-accessory">
+                <div id="options-accessory" class="container-options" >
+                    <img id="option-accessory" src="" alt="">
+                </div>
+            </section>
+        </aside>
+        <section id="container-avatar">
+            <div id="headwear">
+                <img id="chosen-headwear" src="" alt="">
+            </div>
+            <div id="hair">
+                <img id="chosen-hair" src="" alt="">
+            </div>
+            <div id="face">
+                <img id="chosen-face" src="" alt="">
+            </div>
+            <div id="accessory">
+                <img id="chosen-accessory" src="" alt="">
+            </div>
+            <div id="clothing">
+                <img id="chosen-clothing" src="" alt="">
+            </div>
+            <div id="body">
+                <img id="chosen-body" src="" alt="">
+            </div>
+        </section>
+    </main>
 
     <script src="renderer.js"></script>
 </body>
